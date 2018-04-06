@@ -1,0 +1,77 @@
+<!-- <span ng-if="suggestedUsers.length==0"></span> -->
+<!-- <table class="table table-striped"> -->
+<!-- 	<tr ng-repeat="user in suggestedUsers"> -->
+<!-- 		<td>{{user.email}}<br> {{user.firstname}} -->
+<!-- 			&nbsp;{{user.lastname}}<br> <B>Phone Number</B>{{user.phonenumber}} -->
+<!-- 		</td> -->
+<!-- 		<td><img src="http://localhost:8030/ProAngMe/getimage/{{user.email}}" -->
+<!-- 			alt=" No image" height="40px" width="40px"></td> -->
+<!-- 		<td> -->
+<!-- 			<button button type="button" class="button button-primary">Add Friend</button> -->
+<!-- 		</td> -->
+<!-- 	</tr> -->
+<!-- </table> -->
+
+<!-- <span ng-show="suggestedUsers.length==0">No users</span>
+ <span ng-show="suggestedUsers.length!=0">users </span>
+ <div class="container">
+ search <input type="text" ng-model="searchTxt">
+{{suggestedUsers[0].email}}
+ <div class="row">
+ <div ng-repeat="usr in  suggestedUsers">
+   List<Job> response.data
+{{usr.email}}
+ </div>
+ </div>
+ </div>
+  -->
+  
+ <!--  <div class="panel panel-default">
+	<div class="panel-heading">
+		<div ng-repeat="user in suggestedUsers">
+			<table class="table table-striped">
+
+				<tr>
+				<td>Email:{{user[0]}}
+					Name:{{user[1]}}
+					Phone No:{{user[5]}}
+					Online:{{user[3]}}</td>
+					<td><a href="" class="btn btn-primary"
+						ng-click="addfriend(user.email)">Send Friend Request</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div> -->
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div ng-repeat="user in suggestedUsers">
+			<table class="table table-striped">
+				<div class="panel-body">
+					<div style="background-color: lightblue">
+						<b>Email Id:</b> {{user[0]}}<br> <b>Name:</b>{{user[1]}}&nbsp;{{user[2]}}<br>
+						<b>Phone Number:</b>{{user[5]}}<br>
+						<b>Online Status:</b><i ng-show="user[3]">Online</i><i ng-hide="user[3]">Offline</i>
+					</div>
+				</div>
+				<td><a href="" class="btn btn-primary"
+					ng-click="addFriend(user[0])">Send Friend Request</a></td>
+
+							
+			</table>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+

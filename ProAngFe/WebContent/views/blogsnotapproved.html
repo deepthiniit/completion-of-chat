@@ -1,0 +1,45 @@
+<!--  <h1>Blogs not approved</h1> -->
+ 
+<!--  <span ng-show="blogsWaitngForApproval.length==0">No Blogs Waiting For Approval</span> -->
+<!--   <span ng-show="blogsWaitngForApproval.length!=0"> Blogs Waiting For Approval -->
+<!--   <div class="container"> -->
+<!--  <div class="row" style="width:600px"> -->
+<!--  <p>{{blogsWaitingForApproval[0].blogTitle}}</p> -->
+<!--  <div ng-repeat="blog in blogsWaitngForApproval"> -->
+<!--  <p>list of blogs to approve</p> -->
+<!--  <p>{{blog.blogTitle}}</p> -->
+<!--  <div class="panel panel-info"> -->
+<!--  <div class="panel-heading"> -->
+<!--  <a href="#/getblogsnotapproved/{{blog.id}}">{{blog.blogTitle}}</a>  -->
+<!--  </div> -->
+<!--  <div class="panel-body"> -->
+<!--    <b>Posted On:</b> {{blog.PostedOn   | date:'medium'}}<br> -->
+<!--    <b>Posted By:</b>{{blog.PostedBy.firstname}}&nbsp;{{blog.PostedBy.lastname}} -->
+<!--  </div> -->
+<!--  </div> -->
+<!--  </div> -->
+
+<!--  </div>  -->
+<!--  </div> -->
+<!--  </span> -->
+
+
+ <span ng-show="blogsWaitngForApproval.length==0">No Blogs Waiting For Approval</span>
+ <span ng-show="blogsWaitngForApproval.length!=0"> Blogs Waiting For Approval</span>
+ <div class="container">
+<!--  search <input type="text" ng-model="searchTxt"> -->
+ <div class="row">
+ <div ng-repeat="blog in  blogsWaitingForApproval">
+  <!--  List<Job> response.data -->
+ <div class="panel panel-info">
+ 
+ <div class="panel-heading"><a href="#/getblognotapproved/{{blog.id}}">{{blog.blogTitle}}</a></div>
+ </div>
+ <div class="panel-body">
+ <b>Posted on</b>{{blog. postedOn  | date:'medium'}}<br>
+ <b>Posted By:</b>{{blog.postedBy.firstname}}&nbsp;{{blog.postedBy.lastname}}
+ </div>
+ </div>
+ </div>
+ </div>
+ 
